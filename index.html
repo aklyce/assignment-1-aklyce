@@ -1,9 +1,157 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <!-- Link your CSS file and other references here -->
-    </head>
-    <body>
-        <!-- Content goes here -->
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Task Manager</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <button class="menu" type="button" aria-label="Open menu">
+  <img
+    class="menu-icon"
+    src="assets/menu_icon.png"
+    alt=""
+  >
+</button>
+
+    <label class="search">
+  <img
+    class="search-image"
+    src="assets/search_icon.png"
+    alt=""
+  >
+
+  <input
+    type="search"
+    placeholder="Quick Find"
+    aria-label="Search tasks"
+  >
+</label>
+
+    <div class="progress" aria-label="Task progress">
+  <img
+    class="check-icon"
+    src="assets/check_icon.png"
+    alt=""
+  >
+  <span>30/5</span>
+</div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav aria-label="Task categories">
+        <ul class="nav-list">
+          <li>
+            <button
+              class="nav-item active"
+              type="button"
+              aria-current="page"
+            >
+              <img
+                class="nav-icon"
+                src="assets/inbox_icon.png"
+                alt=""
+              >
+              <span>Inbox</span>
+              <span class="task-count">5</span>
+            </button>
+          </li>
+
+          <li>
+            <button class="nav-item" type="button">
+              <img
+                class="nav-icon"
+                src="assets/calendar_icon.png"
+                alt=""
+              >
+              <span>Today</span>
+              <span class="task-count">5</span>
+            </button>
+          </li>
+
+          <li>
+            <button class="nav-item" type="button">
+              <img
+                class="nav-icon"
+                src="assets/upcoming_icon.png"
+                alt=""
+              >
+              <span>Upcoming</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main>
+      <section aria-labelledby="inbox-heading">
+        <h1 id="inbox-heading">Inbox</h1>
+
+        <ul class="task-list">
+          <li class="task">
+            <input
+              class="task-radio"
+              type="radio"
+              id="task-1"
+              name="task-1"
+            >
+            <label for="task-1">Call Mom</label>
+          </li>
+
+          <li class="task">
+            <input
+              class="task-radio"
+              type="radio"
+              id="task-2"
+              name="task-2"
+            >
+            <label for="task-2">
+              Buy the new issue of Scientific American
+            </label>
+          </li>
+
+          <li class="task">
+            <input
+              class="task-radio"
+              type="radio"
+              id="task-3"
+              name="task-3"
+            >
+            <label for="task-3">Return the textbook to Josie</label>
+          </li>
+
+          <li class="task">
+            <input
+              class="task-radio"
+              type="radio"
+              id="task-4"
+              name="task-4"
+            >
+            <label for="task-4">Buy the new album by Rake</label>
+          </li>
+
+          <li class="task">
+            <input
+              class="task-radio"
+              type="radio"
+              id="task-5"
+              name="task-5"
+            >
+            <label for="task-5">Buy a gift card for Dad</label>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
 </html>
